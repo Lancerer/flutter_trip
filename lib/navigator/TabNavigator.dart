@@ -21,7 +21,8 @@ class _TabNavigatorState extends State<TabNavigator> {
 
   //TODO PageView的控制器
   final PageController _controller = PageController(initialPage: 0);
-  List<String>list = new List();
+  List<String> list = new List();
+
   @override
   void initState() {
     super.initState();
@@ -35,7 +36,7 @@ class _TabNavigatorState extends State<TabNavigator> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:Text(list[_currentIndex]),
+        title: Text(list[_currentIndex]),
       ),
       //TODO PageView还没有使用过
       body: PageView(
@@ -67,6 +68,7 @@ class _TabNavigatorState extends State<TabNavigator> {
     );
   }
 
+  //BottomNavigationBarItem的简易封装
   _bottomItem(int index, String title, IconData icon) {
     return BottomNavigationBarItem(
         title: (Text(title,
